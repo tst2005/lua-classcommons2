@@ -1,14 +1,15 @@
-# Similar projects
+# Original project
 
-[Class-Commons](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes).
+[Class-Commons](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes) in 2011-2013.
 
 [ClassCommons2](https://github.com/tst2005/lua-classcommons2) was launched by [TsT](https://github.com/tst2005).
 
 # Goal of ClassCommons2
 
-It's the same goal with only one new main constraint : to NEVER modify the global environment.
-Secondary goal is to be able to use more than one class system at a time.
-And also provide a simple and fast way to get all class system implementation.
+It's the same goal than ClassCommons with only one new main constraint: NEVER modify the global environment.
+Unfortunately it's a break to the original ClassCommons Specs that is explicitly use globals.
+A secondary goal is to be able to use more than one class system at a time
+and also provide a simple and fast way to get all class system implementation.
 
 
 # What changed between ClassCommons and ClassCommons2 ?
