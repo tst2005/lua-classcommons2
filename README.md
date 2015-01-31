@@ -73,10 +73,10 @@ local instance = require("instance")
  * [middleclass]()
  * ...
 
-# Why Am I decided to use SECS as default ?
+# Why use SECS as default ?
 
- * because it the shortest one in term of line of code.
- * because the author this class system is barbes. It's a way to say thanks for the original ClassCommons initiative.
+ * because it the shortest implementation found.
+ * because the author of this class system is barbes, the one who initiate the ClassCommons. It's my way to say thanks to this initiative.
 
 
 Have Fun !
