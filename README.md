@@ -1,20 +1,23 @@
 
-[ClassCommons initiative](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes)
+[Class-Commons initiative](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes)
 
-My ClassCommons2 projet is the same projet with only one new main constraint : to NEVER modify the global environment.
+[ClassCommons2](https://github.com/tst2005/lua-classcommons2) projet was launched by [TsT](https://github.com/tst2005).
+It's the same goal with only one new main constraint : to NEVER modify the global environment.
 Secondary goal is to be able to use more than one class system at a time.
+And also provide a simple and fast way to get all class system implementation.
 
 
-ClassCommon use 2 global variables :
+ClassCommons use 2 global variables :
  * a `common_class` boolean to mark that the class common is supported
  * a `common` table with `common.class` and `common.instance`
 
-ClassCommon2 only use module, no more global variable :
+ClassCommon2 only use modules, no more global variable :
  * the `common_class` boolean was simply dropped.
  * the `common` table was return by a module
 
 In details you have to :
- * load the classcommons2 with `require("classcommons2")` and You will got the equivalent `common` table
+ * load the classcommons2 with `require("classcommons2")`
+   You will got the equivalent `common` table.
 
 
 # Sample of use
@@ -62,3 +65,19 @@ local instance = require("instance")
 ```
 
 
+# Supported implementation
+
+ * [secs]()
+ * [30log]()
+ * [hump]()
+ * [slither]()
+ * [middleclass]()
+ * ...
+
+# Why Am I decided to use SECS as default ?
+
+ * because it the shortest one in term of line of code.
+ * because the author this class system is barbes. It's a way to say thanks for the original ClassCommons initiative.
+
+
+Have Fun !
