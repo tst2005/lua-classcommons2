@@ -1,11 +1,16 @@
 
-[Class-Commons initiative](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes)
+[Class-Commons initiative](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes).
 
 [ClassCommons2](https://github.com/tst2005/lua-classcommons2) projet was launched by [TsT](https://github.com/tst2005).
+
+# Goal of ClassCommons2
+
 It's the same goal with only one new main constraint : to NEVER modify the global environment.
 Secondary goal is to be able to use more than one class system at a time.
 And also provide a simple and fast way to get all class system implementation.
 
+
+# What changed between ClassCommons and ClassCommons2 ?
 
 ClassCommons use 2 global variables :
  * a `common_class` boolean to mark that the class common is supported
@@ -23,17 +28,9 @@ In details you have to :
 # Sample of use
 
 ```
-require("classcommons2")
-local class = require("class")
-local instance = require("instance")
-```
-
-or
-
-```
-local cc2 = require("classcommons2")
-local class = cc2.class
-local instance = cc2.instance
+local common = require("classcommons2")
+local class = common.class
+local instance = common.instance
 ```
 
 By default the SECS class system was used.
