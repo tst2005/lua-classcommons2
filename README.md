@@ -7,7 +7,7 @@
 # Goal of ClassCommons2
 
 It's the same goal than ClassCommons with only one new main constraint: NEVER modify the global environment.
-Unfortunately it's a break to the original ClassCommons Specs that is explicitly use globals.
+Unfortunately it's a break to the original [ClassCommons Specs](https://github.com/bartbes/Class-Commons/blob/master/SPECS.md) that is explicitly use globals.
 A secondary goal is to be able to use more than one class system at a time
 and also provide a simple and fast way to get all class system implementation.
 
