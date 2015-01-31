@@ -78,5 +78,12 @@ local instance = require("instance")
  * because it the shortest implementation found.
  * because the author of this class system is barbes, the one who initiate the ClassCommons. It's my way to say thanks to this initiative.
 
+# TODO
+
+- add the tests suite !
+- add license header in each files
+- add submodule for each class implementation
+- see to allow class("name") without table argument.
+
 
 Have Fun !
