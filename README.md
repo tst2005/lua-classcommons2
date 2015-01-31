@@ -9,10 +9,12 @@ ClassCommon use 2 global variables :
  * a `common_class` boolean to mark that the class common is supported
  * a `common` table with `common.class` and `common.instance`
 
-ClassCommon2 always use module :
- * load the classcommons2 with require("classcommons2") (you will got the equivalent `common` table)
- * the previous `common.class` is got by using `require("class")` or 
- * the previous `common.instance` is got by using `require("instance")`
+ClassCommon2 only use module, no more global variable :
+ * the `common_class` boolean was simply dropped.
+ * the `common` table was return by a module
+
+In details you have to :
+ * load the classcommons2 with `require("classcommons2")` and You will got the equivalent `common` table
 
 
 # Sample of use
@@ -49,6 +51,14 @@ or load directly the wanted implementation with
 local cc2 = require("classcommons2.middleclass")
 local class = cc2.class
 local instance = cc2.instance
+```
+
+# Universal way to manage class system
+
+With the help of ([newmodule](https://github.com/tst2005/lua-newmodule) and [provide](https://github.com/tst2005/lua-provide) (See [lua-mininal](https://github.com/tst2005/lua-minimal) for details) classcommons2 will be able to provide the easiest was to got class and instance with :
+```
+local class = require("class") 
+local instance = require("instance")
 ```
 
 
