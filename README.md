@@ -1,7 +1,8 @@
+# Similar projects
 
-[Class-Commons initiative](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes).
+[Class-Commons](https://github.com/bartbes/Class-Commons) was launched by [barbes](https://github.com/bartbes).
 
-[ClassCommons2](https://github.com/tst2005/lua-classcommons2) projet was launched by [TsT](https://github.com/tst2005).
+[ClassCommons2](https://github.com/tst2005/lua-classcommons2) was launched by [TsT](https://github.com/tst2005).
 
 # Goal of ClassCommons2
 
