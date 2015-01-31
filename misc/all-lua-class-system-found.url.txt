@@ -1,0 +1,19 @@
+
+* 30log : https://github.com/Yonaba/30log.git
+	forker : ssh://git@github.com/tst2005/30logclasscommons.git
+
+* classy : https://github.com/siffiejoe/lua-classy
+
+* lua-upperclass : https://github.com/admin36/lua-upperclass
+
+* loop : https://rocks.moonscript.org/modules/luarocks/loop
+
+* microlight : https://rocks.moonscript.org/modules/luarocks/microlight ; http://stevedonovan.github.io/microlight/
+
+* LCS : https://github.com/Yonaba/Lua-Class-System
+
+* sunclass : https://github.com/qwook/sunclass/
+
+* lua-prototype : http://siffiejoe.github.io/lua-prototype/ 
+
+* opject-lua [deprecated?] : https://github.com/sroccaserra/object-lua/
