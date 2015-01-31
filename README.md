@@ -55,15 +55,6 @@ local class = cc2.class
 local instance = cc2.instance
 ```
 
-# Universal way to manage class system
-
-With the help of ([newmodule](https://github.com/tst2005/lua-newmodule) and [provide](https://github.com/tst2005/lua-provide) (See [lua-mininal](https://github.com/tst2005/lua-minimal) for details) classcommons2 will be able to provide the easiest was to got class and instance with :
-```
-local class = require("class") 
-local instance = require("instance")
-```
-
-
 # Supported implementation
 
  * [secs]()
@@ -80,10 +71,12 @@ local instance = require("instance")
 
 # TODO
 
-- add the tests suite !
-- add license header in each files
-- add submodule for each class implementation
-- see to allow class("name") without table argument.
+ * Add the tests suite !
+ * Add license header in each files
+ * Add submodule for each class implementation
+ * See to allow class("name") without table argument.
+ * See if the classcommons2 must really provide the `require("class")` and `require("instance")`
+ * * With the help of ([newmodule](https://github.com/tst2005/lua-newmodule) and [provide](https://github.com/tst2005/lua-provide) (See [lua-mininal](https://github.com/tst2005/lua-minimal) for details) classcommons2 will be able to provide the easiest was to got class and instance. Currently done by the dragoon-framework.
 
 
 Have Fun !
