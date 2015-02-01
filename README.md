@@ -49,9 +49,9 @@ local instance = common.instance
 or load directly the wanted implementation with
 
 ```
-local cc2 = require("classcommons2.middleclass")
-local class = cc2.class
-local instance = cc2.instance
+local common = require("classcommons2.middleclass")
+local class = common.class
+local instance = common.instance
 ```
 
 # Supported implementation
