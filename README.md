@@ -39,12 +39,11 @@ By default the SECS class system was used.
 You can choose the default with :
 
 ```
-local cc2default = require("classcommons2.default")
-cc2default.name = "middleclass"
+require("classcommons2.default").name = "middleclass"
 
-local cc2 = require("classcommons2")
-local class = cc2.class
-local instance = cc2.instance
+local common = require("classcommons2")
+local class = common.class
+local instance = common.instance
 ```
 
 or load directly the wanted implementation with
