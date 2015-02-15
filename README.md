@@ -57,11 +57,23 @@ local instance = common.instance
 # Supported implementation
 
  * [secs]()
- * [30log]()
+ * [30log](https://github.com/Yonaba/30log.git) / [30logclasscommons](https://github.com/tst2005/30logclasscommons)[.git](ssh://git@github.com/tst2005/30logclasscommons.git)
  * [hump]()
  * [slither]()
  * [middleclass]()
  * ...
+
+# Other implementation to support
+
+* [classy](https://github.com/siffiejoe/lua-classy)
+* [classic](https://github.com/rxi/classic)
+* [lua-upperclass](https://github.com/admin36/lua-upperclass)
+* [loop](https://rocks.moonscript.org/modules/luarocks/loop)
+* [microlight](https://rocks.moonscript.org/modules/luarocks/microlight) ([doc](http://stevedonovan.github.io/microlight/))
+* [LCS](https://github.com/Yonaba/Lua-Class-System)
+* [sunclass](https://github.com/qwook/sunclass/)
+* [lua-prototype](http://siffiejoe.github.io/lua-prototype/)
+* [opject-lua](https://github.com/sroccaserra/object-lua/) (deprecated?)
 
 # Why use SECS as default ?
 
@@ -70,10 +82,10 @@ local instance = common.instance
 
 # TODO
 
- * Add the tests suite !
+ * Add the modified test-suite !
  * Add license header in each files
  * Add submodule for each class implementation
- * See to allow class("name") without table argument.
+ * Try to allow class("name") without table argument.
  * See if the classcommons2 must really provide the `require("class")` and `require("instance")`
  * * With the help of ([newmodule](https://github.com/tst2005/lua-newmodule) and [provide](https://github.com/tst2005/lua-provide) (See [lua-mininal](https://github.com/tst2005/lua-minimal) for details) classcommons2 will be able to provide the easiest was to got class and instance. Currently done by the dragoon-framework.
 
