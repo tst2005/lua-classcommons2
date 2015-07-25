@@ -11,8 +11,9 @@ Unfortunately it's a break to the original [ClassCommons Specs](https://github.c
 A secondary goal is to be able to use more than one class system at a time
 and also provide a simple and fast way to get all class system implementation.
 
+# ClassCommons 2.0
 
-# What changed between ClassCommons and ClassCommons2 ?
+## What changed between ClassCommons and ClassCommons2 ?
 
 ClassCommons use 2 global variables :
  * a `common_class` boolean to mark that the class common is supported
@@ -27,9 +28,9 @@ In details you have to :
    You will got the equivalent `common` table.
 
 
-# Sample of use
+## Sample of use
 
-```
+```lua
 local common = require("classcommons2")
 local class = common.class
 local instance = common.instance
@@ -38,7 +39,7 @@ local instance = common.instance
 By default the SECS class system was used.
 You can choose the default with :
 
-```
+```lua
 require("classcommons2.default").name = "middleclass"
 
 local common = require("classcommons2")
@@ -48,7 +49,7 @@ local instance = common.instance
 
 or load directly the wanted implementation with
 
-```
+```lua
 local common = require("classcommons2.middleclass")
 local class = common.class
 local instance = common.instance
@@ -56,11 +57,108 @@ local instance = common.instance
 
 # ClassCommons 2.1
 
+## The goal
+
+I'm trying to simplify it and think about how switch between different class system implementation easily.
+
+The main classcommons2 should be a proxy object to be able to switch between implementation.
+
+```lua
+local class = require("class") -- or require("class")
+
+class:available()       -- return a table with all available implementations and the current default in the item "default"
+                        -- return {"secs", "30log", "middleclass"}
+                        -- or
+                        -- ? return {"secs", "30log", "middleclass", default = "secs"} ?
+
+class:current()         -- return "secs", the current implementation name
+class:default()         -- return "secs"
+
+class:available("secs") -- return true -- really want ?
+class:current()         -- return "secs" the current implementation
+
+
+
+local class = class:want("middleclass") -- get the middleclass implementation (return nil in case of failure)
+assert(class, "middleclass is not available")
+
+class:current() -- return "middleclass" the current implementation
+class:default() -- return "secs"
+
+local class = class:want(class:default()) -- switch back to the default
+
+```
+
+Should we allow to change the default ?
+
+```
+class:default("blah")    -- change the default setting : return true/false
+```
+
+## What calling (a class) means ?
+
+ * Create a new subclass ? (like middleclass)
+ * Create a new instance ? (like 30log)
+
+In conclusion: just avoid to call a class object.
+
+## Choose the API
+
+The "class" module must return a callable table.
+ * Calling it must be use to create a class (or subclass).
+This table must contains some items like the `common` table of ClassCommons :
+* class : the function to create class (like the common.class of ClassCommons)
+* instance : the function to create instance (like the common.instance of ClassCommons)
+
+```lua
+local class = require "class"
+assert(class.class)
+assert(class.instance)
+-- class("foo") is equal to class.class("foo")
+
+assert(class.available
+```
+
+### What keyword ?
+
+For creating a subclass :
+ * :sub() is too close from the string:sub()
+ * :subclass() seems ok (used by middleclass)
+ * :extend() seems ok (used by 30log
+
+For creating a instance :
+ * :new() seems commonly used, but a "new what?" new class ? subclass ? instance ?
+ * :instance() seems clear enough ?
+
+## Using operator ?
+
+```lua
+local class = require "class"
+
+local foo = class("foo")
+local subfoo1 = foo:subclass()
+local subfoo2 = foo:subclass()
+```
+
+## Create subclass and instance
+
+```lua
+local class = require("classcommons2")
+
+local myfooclass            = class("foo")                  -- a new foo class
+local myfoosubclass         = myfooclass:subclass("subfoo") -- a new subclass of foo
+
+local myfooinstance         = myfooclass:new()      -- a new instance of foo
+local myfoosubclassinstance = myfoosubclass:new()   -- a new instance of subfoo
+```
+
+## Create a new instance
+
 ```lua
 local class = require("classcommons2")
 
 local myfooclass = class("foo")
-local myfooinstance = myfooclass()
+local myfooinstance = myfooclass:new()
 ```
 
 ## Call a class to create a new instance
