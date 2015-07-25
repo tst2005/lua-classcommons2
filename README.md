@@ -54,13 +54,31 @@ local class = common.class
 local instance = common.instance
 ```
 
+# ClassCommons 2.1
+
+```lua
+local class = require("classcommons2")
+
+local myfooclass = class("foo")
+local myfooinstance = myfooclass()
+```
+
+## Call a class to create a new instance
+
+Already supported :
+ * 30log: already ok ([link](https://github.com/Yonaba/30log/blob/master/README.md#class%28%29))
+ * middleclass : ?
+ * secs : need small change (patched, seems ok)
+ * hump : ?
+ * slither : ?
+
 # Supported implementation
 
  * [secs]()
+ * [middleclass]()
  * [30log](https://github.com/Yonaba/30log.git) / [30logclasscommons](https://github.com/tst2005/30logclasscommons)[.git](ssh://git@github.com/tst2005/30logclasscommons.git)
  * [hump]()
  * [slither]()
- * [middleclass]()
  * ...
 
 # Other implementation to support
